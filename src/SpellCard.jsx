@@ -31,6 +31,7 @@ const SpellCard = ({ spell }) => {
               <p key={index + line.slice(0, 5)}>{line}</p>
             )}
           </div>
+          <h3>Spell Stats</h3>
           <ul id="spell-stats">
             <li>Level: {spellDetails.level}</li>
             <li>Range: {spellDetails.range}</li>

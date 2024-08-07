@@ -34,32 +34,50 @@ body {
 
 #main {
   display: flex;
+  flex-direction: row;
   width: 100vw;
-  height: 90vh; /* Full viewport height */
-  position: relative; /* Parent container for absolute positioning */
+  height: 90vh;
+  position: relative;
+  overflow: hidden; /* Prevent overflow */
+}
+
+#spell-list, #spell-card {
+  padding: 5px;
+  border: 1px solid black;
 }
 
 #spell-list {
-  width: 40%;
-  height: 100%; /* Full height to enable scrolling */
-  overflow-y: auto; /* Enable vertical scrolling */
-  border: 1px solid black;
-  padding: 5px;
+  flex: 1;
+  overflow-y: auto;
 }
 
 #spell-card {
-  width: 60%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 1px solid black;
-  padding: 5px;
-  background: white; /* Optional: make sure it has a background */
-  overflow-y: scroll;
+  flex: 1;
+  background: white;
+  overflow-y: auto;
 }
 
 #spell-stats {
-  background: lightgray;
-  border: 1px solid black;
+  background-color: rgb(237, 237, 237);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  #main {
+    flex-direction: column;
+  }
+
+  #spell-list {
+    height: 33vh; /* 1/3 of viewport height */
+    width: 100%;
+    overflow-y: auto; /* Ensure content scrolls if needed */
+  }
+
+  #spell-card {
+    height: calc(90vh - 33vh); /* Remaining height, adjusts with viewport height */
+    width: 100%;
+    overflow-y: auto; /* Ensure content scrolls if needed */
+  }
 }
