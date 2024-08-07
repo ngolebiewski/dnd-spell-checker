@@ -47,12 +47,12 @@ body {
 }
 
 #spell-list {
-  flex: 1;
+  flex: 2;
   overflow-y: auto;
 }
 
 #spell-card {
-  flex: 1;
+  flex: 3;
   background: white;
   overflow-y: auto;
 }
@@ -63,21 +63,18 @@ body {
   padding-bottom: 5px;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   #main {
     flex-direction: column;
   }
 
   #spell-list {
-    height: 33vh; /* 1/3 of viewport height */
-    width: 100%;
-    overflow-y: auto; /* Ensure content scrolls if needed */
+    flex: 1;
+    overflow-y: auto; 
   }
 
   #spell-card {
-    height: calc(90vh - 33vh); /* Remaining height, adjusts with viewport height */
-    width: 100%;
-    overflow-y: auto; /* Ensure content scrolls if needed */
+    flex: 3;
+    overflow-y: auto; 
   }
 }
