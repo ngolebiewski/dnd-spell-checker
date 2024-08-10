@@ -76,5 +76,6 @@ body {
   #spell-card {
     flex: 3;
     overflow-y: auto; 
+    padding-bottom: 10vh;
   }
 }
