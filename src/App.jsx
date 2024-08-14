@@ -32,7 +32,7 @@ function App() {
       <section id="main">
         <div id="spell-list">
           <label htmlFor="class-select">Choose a class: </label>
-          <select id="class-select" class="nanum-gothic-coding-regular" value={charClass} onChange={(e) => setCharClass(e.target.value)}>
+          <select id="class-select" className="nanum-gothic-coding-regular" value={charClass} onChange={(e) => setCharClass(e.target.value)}>
             {classes.map((classItem) => (
               <option key={classItem} value={classItem} >
                 {classItem.charAt(0).toUpperCase() + classItem.slice(1)}

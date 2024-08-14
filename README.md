@@ -1,4 +1,4 @@
-# Dungeons and Dragons
+# Dungeons and Dragons Spell Checker
 
 ## Sort Magic Spells by Character Class and Show Spell Details
 
